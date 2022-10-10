@@ -1,0 +1,139 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #e4dcdc;
+}
+
+/* Nav ----------------------------------------- */
+.nav{
+  width: 100%;
+  height: 62px;
+  background-color: #2cc4b7;
+  position:sticky;
+}
+
+.nav-container{
+  display: flex;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.nav-logo{
+  height: fit-content;
+  width: fit-content;
+  font-weight: 700;
+  font-size: 28px;
+  margin: 15px 0;
+  color: #363636;
+}
+/* -------------------------------------Carrito------------------------------ */
+.nav-cart{
+  display: block;
+  cursor: pointer;
+}
+/* ---------------------------------------Menu------------------------------- */
+.nav-input:checked + nav-menu{
+  background: #adadad;
+}
+
+.nav-label, .nav-input{
+  display: none;
+}
+
+.nav-menu{
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.nav-item{
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+@media (max-width: 768px){
+
+    .nav-item{
+      color: #363636;
+    }
+
+    .nav-label{
+      display: block;
+      cursor: pointer;
+    }
+
+    .nav-menu{
+      position:  fixed;
+      top: 62px;
+      bottom: 0;
+      background: #ffffff;
+      width: 100%;
+      left: 0;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+      clip-path: circle(0 at center);
+      transition: clip-path 1s ease-in-out;
+    }
+
+    .nav-input:checked + .nav-menu{
+      clip-path: circle(100% at center);
+    }
+}
+
+/* -----------------------------------Hero-------------------------------- */
+
+.logo{
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #b0c7bf;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px black;
+}
+
+.hero{
+  width: 100%;
+  height: auto;
+}
+
+/* Home----------------------------------------------------------------------------- */
+
+.description{
+  margin: 15px;
+}
+
+.subtitles{
+  font-size: 23px;
+  font-weight: 700;
+  color: #424242;
+}
+
+.paragraph{
+  font-size: 18px;
+  font-weight: 300;
+  color: #777777;
+}
+
+/* Products---------------------------------------------------------------- */
+
+.products{
+  display: flex;
+  flex-direction: column;
+}
+
+.product{
+  border: 1px solid #777777;
+  
+}
