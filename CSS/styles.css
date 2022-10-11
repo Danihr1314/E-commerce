@@ -138,11 +138,51 @@ header{
 
 /* Products---------------------------------------------------------------- */
 
-.product-container{
-  display:flex;
+.products-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product{
+  width: 220px;
+  height: auto;
+  padding: 10px;
+  margin: 50px;
+  box-shadow: 1px 1px 1px 2px rgb(189, 189, 189);
+  border-radius: 20px 0 20px 0;
+  background-color: #ebe0e0;
+  text-align: center;
+}
+
+.product:hover{
+  box-shadow: 1px 1px 1px 2px rgb(128, 128, 128);
+  transition: box-shadow 0.5s;
 }
 
 .product img{
   width: 200px;
   height: 133px;
+  border-radius: 10px;
+}
+
+/* footer---------------------------------------------------------------------------- */
+
+footer div{
+  margin-bottom: 0;
+  padding: 15px;
+  background-color: #b8b8b8;
+}
+
+footer ul{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+footer ul img{
+  width: 30px;
+  height: auto;
 }

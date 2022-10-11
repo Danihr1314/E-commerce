@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CatFly</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link rel="shortcut icon" href="Iconos/favicon.png" type="image/x-icon">
   </head>
   <body>
     <header>
       <nav class="nav">
         <div class="nav-container">
-          <label for="cart" class="nav-cart">
+          <a href="#cart" for="cart" class="nav-cart">
             <img src="Iconos/cart-shopping-solid.svg" class="nav-image" alt="shopping-cart">
-          </label>
+          </a>
           <input type="checkbox" id="cart" class="nav-input">
           <div class="products-added">
           </div>
@@ -55,31 +56,52 @@
         <div class="product">
           <img src="Imagenes/Cojin.jpeg" alt="producto1">
           <div class="info">
-            <p>Cojin</p>
-            <p class="price">$20</p>
+            <p class="paragraph">Cojin</p>
+            <p class="price paragraph">$20</p>
             <button>Comprar</button>
           </div>
         </div>
         <div  class="product">
           <img src="Imagenes/juguete.jpg" alt="producto2">
           <div class="info">
-            <p>Juguete</p>
-            <p class="price">$20</p>
+            <p class="paragraph">Juguete</p>
+            <p class="price paragraph">$7</p>
             <button>Comprar</button>
           </div>
         </div>
         <div  class="product">
           <img src="Imagenes/rascador.jpg" alt="producto3">
           <div class="info">
-            <p>Rascador</p>
-            <p class="price">$20</p>
+            <p class="paragraph">Rascador</p>
+            <p class="price paragraph">$40</p>
             <button>Comprar</button>
           </div>
         </div>
       </div>
     </section>
-    <footer id="contact">
+    <section id="cart">
       
+    </section>
+    <footer id="contact">
+      <div>
+        <div>
+          <h3 class="subtitles">Informacion</h3>
+          <p class="paragraph">Pereira - Colombia</p>
+        </div>
+        <div>
+          <h3 class="subtitles">Social</h3>
+          <ul>
+            <i><img src="Iconos/facebook.png" alt="facebook"></i>
+            <i><img src="Iconos/instagram.png" alt="instagram"></i>
+            <i></i>
+          </ul>
+        </div>
+        <div>
+          <h3 class="subtitles">Contacto</h3>
+          <p class="paragraph">3225281707</p>
+        </div>
+      </div>
     </footer>
   </body>
+  <script src="JS/app.js"></script>
 </html>
