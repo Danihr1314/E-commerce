@@ -192,6 +192,13 @@ header{
   align-items: center;
 }
 
+.buy{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
 /* footer---------------------------------------------------------------------------- */
 
 footer div{
@@ -210,4 +217,25 @@ footer ul{
 footer ul img{
   width: 30px;
   height: auto;
+}
+
+@media (min-width: 769px){
+  .hero-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo{
+    width: 80%;
+  }
+
+  .hero{
+    width: 80%;
+  }
+
+  .products-container{
+    flex-direction: row;
+  }
 }

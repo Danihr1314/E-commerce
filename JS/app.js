@@ -17,14 +17,13 @@ function createProduct(mount){
         <p class="price-cart">${products.price}</p>
       </div>`})
       shopArea.innerHTML = elements.join("");
-    }
+  }
+}
   // }else{
   //   let mounty = document.querySelector('.mount')
   //   mounty.innerHTML = mounty.textContent = mount;
   // }
-}
   
-
 
 // Cojin----------------------------------------------------
 
@@ -70,4 +69,7 @@ thirdButton.addEventListener('click', (e) =>{
   productsArray.push({ product,price});
   createProduct(mountRascador);
 })
+
+// minus---------------------------------------------------
+
 
