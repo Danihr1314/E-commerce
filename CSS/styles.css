@@ -192,11 +192,19 @@ header{
   align-items: center;
 }
 
-.buy{
+.buy-container{
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px;
+}
+
+.minus{
+  cursor: pointer;
+}
+
+.plus{
+  cursor: pointer;
 }
 
 /* footer---------------------------------------------------------------------------- */

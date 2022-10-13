@@ -4,26 +4,37 @@ let mountCojin = 0;
 let mountJuguete = 0;
 let mountRascador = 0;
 
+
+// Prices-----------------------------------
+let priceCojin = document.querySelector('.price').textContent;
+let priceJuguete = document.querySelector('.price1').textContent;
+let priceRascador = document.querySelector('.price2').textContent;
+
+let newPriceCojin = Number(priceCojin.slice(1));
+let newPriceJuguete = Number(priceJuguete.slice(1));
+let newPriceRascador = Number(priceRascador.slice(1));
+
+// Agregar----------------------------------------------
+
+
+// -------------------------------------------------------------
 let productsArray = [];
 
 function createProduct(mount){
   if (mount < 2){
     const elements = productsArray.map((products) => {
+        localStorage.setItem(`${products.product}`, JSON.stringify(mount))
         return`<div class='card'>
         <h3>${products.product}</h3>
-        <a class='minus'>-</a>
+        <a class='minus-${products.product}'>-</a>
         <p class="mount">${mount}</p>
-        <a class='plus'>+</a>
+        <a class='plus-${products.product}'>+</a>
         <p class="price-cart">${products.price}</p>
       </div>`})
       shopArea.innerHTML = elements.join("");
   }
+  totalPrice();
 }
-  // }else{
-  //   let mounty = document.querySelector('.mount')
-  //   mounty.innerHTML = mounty.textContent = mount;
-  // }
-  
 
 // Cojin----------------------------------------------------
 
@@ -70,6 +81,30 @@ thirdButton.addEventListener('click', (e) =>{
   createProduct(mountRascador);
 })
 
-// minus---------------------------------------------------
+// comprar---------------------------------------------------
+
+const buy = document.querySelector('.buy');
+
+buy.addEventListener('click', (e)=>{
+  localStorage.clear();
+  productsArray = [];
+  location.reload();
+})
+
+// Total-------------------------------------------------
+
+function totalPrice (){
+  let totalCojin = newPriceCojin * mountCojin;
+  let totalJuguete = newPriceJuguete * mountJuguete;
+  let totalRascador = newPriceRascador * mountRascador;
+  let total = totalCojin + totalJuguete + totalRascador
+
+  const inner = `
+  <div>
+    <p>Total a pagar: $${total}</p>
+  </div>`
+
+  shopArea.innerHTML += inner;
+}
 
 
