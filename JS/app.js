@@ -33,6 +33,7 @@ function createProduct(mount){
       </div>`})
       shopArea.innerHTML = elements.join("");
   }
+
   totalPrice();
 }
 
@@ -106,5 +107,3 @@ function totalPrice (){
 
   shopArea.innerHTML += inner;
 }
-
-
